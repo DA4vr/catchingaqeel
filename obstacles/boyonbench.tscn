@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpeyvood32dwn"]
+
+[ext_resource type="Texture2D" uid="uid://cev10s16vx85k" path="res://obstacles/pixilart-drawing (2).png" id="1_47lu8"]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-6, -3)
+scale = Vector2(4, 4)
+texture = ExtResource("1_47lu8")

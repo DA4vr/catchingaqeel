@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cg7vmbib0on4q"]
+
+[ext_resource type="Texture2D" uid="uid://cdee20fg4cxid" path="res://obstacles/afifCAAD-Sheet.png" id="1_pajs2"]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(5, 5)
+texture = ExtResource("1_pajs2")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(5, 5)
+polygon = PackedVector2Array(1.2, -8.4, 1.4, -4.8, 1.2, 2.4, 6.8, 4.6, 7.6, 10.6, 4.6, 11.6, -3.2, 12.4, -7, 10.2, -6.6, 2.8, -8, 0, -9.6, -2.8, -7, -8.6, -4.8, -10.8, -3.2, -11.4, -1.8, -11.2)

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bwbt16bn6ch3e"
+path="res://.godot/imported/cyberpunk-street.ogg-89cf6755f73c99861bd60b884e72626f.oggvorbisstr"
+
+[deps]
+
+source_file="res://bg cyber/cyberpunk-street.ogg"
+dest_files=["res://.godot/imported/cyberpunk-street.ogg-89cf6755f73c99861bd60b884e72626f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

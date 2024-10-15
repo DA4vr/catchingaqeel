@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://coyji2r76va5k"]
+
+[ext_resource type="Texture2D" uid="uid://d0xbwrvfxm78q" path="res://bg cyber/cyberpunk-street.png" id="1_wjggs"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_82m66"]
+light_mode = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5gmu0"]
+size = Vector2(1822.5, 90)
+
+[node name="Ground" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_82m66")
+position = Vector2(-1, 541)
+scale = Vector2(3, 3)
+texture = ExtResource("1_wjggs")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(913.75, 598)
+shape = SubResource("RectangleShape2D_5gmu0")

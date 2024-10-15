@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cqicyuth51lym"
+path="res://.godot/imported/The Nightclub.wav-26775c25ddc57f37a324f48a03066f0e.sample"
+
+[deps]
+
+source_file="res://The Nightclub.wav"
+dest_files=["res://.godot/imported/The Nightclub.wav-26775c25ddc57f37a324f48a03066f0e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

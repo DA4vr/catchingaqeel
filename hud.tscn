@@ -1,0 +1,199 @@
+[gd_scene load_steps=11 format=3 uid="uid://cckd8c0ddmkwg"]
+
+[ext_resource type="FontFile" uid="uid://docd81np6erry" path="res://Cyberphont/Cyberphont 2.0.ttf" id="1_8uvaj"]
+[ext_resource type="Texture2D" uid="uid://8mntyv21ulb8" path="res://aqeel-Sheet.png" id="2_5uini"]
+[ext_resource type="Texture2D" uid="uid://cxcwlrdhtquod" path="res://cloudbubble.png" id="3_mxkkq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwbjx"]
+atlas = ExtResource("2_5uini")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ox28e"]
+atlas = ExtResource("2_5uini")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gla8d"]
+atlas = ExtResource("2_5uini")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cryoa"]
+atlas = ExtResource("2_5uini")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhyme"]
+atlas = ExtResource("2_5uini")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52vpu"]
+atlas = ExtResource("2_5uini")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n8kgh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwbjx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ox28e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gla8d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cryoa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhyme")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52vpu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Score Label" type="Label" parent="."]
+texture_filter = 1
+offset_right = 168.0
+offset_bottom = 81.0
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("1_8uvaj")
+theme_override_font_sizes/font_size = 40
+text = "SCORE: "
+horizontal_alignment = 1
+
+[node name="LEADERBOARD" type="Label" parent="."]
+texture_filter = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -81.0
+offset_right = 367.0
+grow_vertical = 0
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("1_8uvaj")
+theme_override_font_sizes/font_size = 40
+text = "LEADER BOARD:"
+horizontal_alignment = 1
+
+[node name="START" type="Label" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = 72.0
+offset_right = 353.0
+offset_bottom = 153.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("1_8uvaj")
+theme_override_font_sizes/font_size = 32
+text = "PRESS SPACE TO START"
+horizontal_alignment = 1
+
+[node name="TITLE" type="Label" parent="."]
+texture_filter = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -139.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_8uvaj")
+theme_override_font_sizes/font_size = 58
+text = "CATCHING AQEEL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(566, 87)
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_n8kgh")
+autoplay = "default"
+frame_progress = 0.0387822
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 682.0
+offset_top = -1.0
+offset_right = 1148.0
+offset_bottom = 164.0
+texture = ExtResource("3_mxkkq")
+
+[node name="Control" type="Control" parent="TextureRect"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="oldpeople" type="RichTextLabel" parent="TextureRect/Control"]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 14.0
+offset_right = 412.0
+offset_bottom = 144.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_8uvaj")
+theme_override_font_sizes/normal_font_size = 20
+text = "some people are old, but they continue their 	stupidity"
+fit_content = true
+
+[node name="zero" type="RichTextLabel" parent="TextureRect/Control"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 33.0
+offset_right = 413.0
+offset_bottom = 142.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_8uvaj")
+theme_override_font_sizes/normal_font_size = 20
+text = "who said zero? he's a hero. he is also a zero"
+fit_content = true
+
+[node name="yesterday" type="RichTextLabel" parent="TextureRect/Control"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 33.0
+offset_right = 411.0
+offset_bottom = 129.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_8uvaj")
+theme_override_font_sizes/normal_font_size = 20
+text = "if you came tomorrow, i will see you yesterday "
+fit_content = true
+
+[node name="moneyhoney" type="RichTextLabel" parent="TextureRect/Control"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 33.0
+offset_right = 411.0
+offset_bottom = 129.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_8uvaj")
+theme_override_font_sizes/normal_font_size = 20
+text = "you say money but you are not my honey"
+fit_content = true
+
+[node name="face me" type="RichTextLabel" parent="TextureRect/Control"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 21.0
+offset_right = 406.0
+offset_bottom = 135.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_8uvaj")
+theme_override_font_sizes/normal_font_size = 28
+text = "are you ready to face me"
+fit_content = true

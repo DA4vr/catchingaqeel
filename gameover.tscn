@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=3 uid="uid://fkxrppv6mcd2"]
+
+[ext_resource type="Texture2D" uid="uid://bk04ye5asqnqr" path="res://gameOver.png" id="1_8t61o"]
+[ext_resource type="FontFile" uid="uid://docd81np6erry" path="res://Cyberphont/Cyberphont 2.0.ttf" id="2_cfgv7"]
+
+[sub_resource type="Gradient" id="Gradient_cxa8e"]
+offsets = PackedFloat32Array(0.769481, 0.772727, 0.775974, 0.779221, 0.951299)
+colors = PackedColorArray(0, 0, 0, 1, 0.425325, 0.425325, 0.425325, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_b3gcn"]
+gradient = SubResource("Gradient_cxa8e")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jyh7n"]
+bg_color = Color(0.94902, 0.14902, 0, 1)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -326.0
+offset_bottom = 323.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_b3gcn")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -195.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8t61o")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0.921569, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_cfgv7")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxFlat_jyh7n")
+text = "RESTART"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 397.0
+offset_bottom = 467.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_cfgv7")
+theme_override_font_sizes/normal_font_size = 35
+text = "YOU SHYED , SO YOU DIED. I WILL SEE YOU IN JANNAH"
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

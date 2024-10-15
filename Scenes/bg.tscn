@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbtjpb7nawbo7"]
+
+[ext_resource type="Texture2D" uid="uid://b62msvraxy40l" path="res://bg cyber/far-buildings.png" id="1_56w2r"]
+[ext_resource type="Texture2D" uid="uid://mwq23hwojq2c" path="res://bg cyber/back-buildings.png" id="2_naxdh"]
+[ext_resource type="Texture2D" uid="uid://bsuh5h0tjek1d" path="res://bg cyber/back.png" id="3_bchc4"]
+
+[node name="BG" type="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3.4, 3.4)
+texture = ExtResource("1_56w2r")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(868, 0)
+scale = Vector2(3.4, 3.4)
+texture = ExtResource("1_56w2r")
+centered = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(870, 2.08165e-12)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+texture_filter = 1
+scale = Vector2(3.4, 3.4)
+texture = ExtResource("2_naxdh")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.9, 1)
+motion_mirroring = Vector2(1180, 2.08165e-12)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer2"]
+texture_filter = 1
+scale = Vector2(3.4, 3.4)
+texture = ExtResource("3_bchc4")
+centered = false
